@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thank You | AstroVastuPooja</title>
+
+    <meta name="description"
+        content="Thank you for contacting AstroVastuPooja. Pt. Dhiraj Baluni's team will call you within 24 hours.">
+
+
+    <!-- Bootstrap -->
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+
+    <!-- Bootstrap Icons -->
+
+    <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <style>
+
+        *{
+
+            box-sizing:border-box;
+
+        }
+
+
+        body{
+
+            margin:0;
+
+            min-height:100vh;
+
+            font-family:Arial, sans-serif;
+
+            background:#fffaf3;
+
+        }
+
+
+        /* =================================
+           THANK YOU SECTION
+        ================================= */
+
+        .thankyou-section{
+
+            min-height:100vh;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            padding:40px 20px;
+
+            position:relative;
+
+            overflow:hidden;
+
+            background:
+
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(184,134,11,.13),
+                    transparent 30%
+                ),
+
+                radial-gradient(
+                    circle at 90% 80%,
+                    rgba(139,0,0,.08),
+                    transparent 30%
+                ),
+
+                #fffaf3;
+
+        }
+
+
+        /* =================================
+           DECORATIVE CIRCLES
+        ================================= */
+
+        .thankyou-section::before{
+
+            content:"";
+
+            position:absolute;
+
+            width:350px;
+
+            height:350px;
+
+            border-radius:50%;
+
+            background:rgba(184,134,11,.06);
+
+            top:-160px;
+
+            left:-120px;
+
+        }
+
+
+        .thankyou-section::after{
+
+            content:"";
+
+            position:absolute;
+
+            width:300px;
+
+            height:300px;
+
+            border-radius:50%;
+
+            background:rgba(139,0,0,.04);
+
+            bottom:-130px;
+
+            right:-100px;
+
+        }
+
+
+        /* =================================
+           THANK YOU CARD
+        ================================= */
+
+        .thankyou-card{
+
+            position:relative;
+
+            z-index:2;
+
+            width:100%;
+
+            max-width:700px;
+
+            padding:55px 45px;
+
+            background:#fff;
+
+            border:1px solid #eadfcf;
+
+            border-radius:28px;
+
+            text-align:center;
+
+            box-shadow:
+                0 25px 70px rgba(0,0,0,.10);
+
+        }
+
+
+        /* =================================
+           SUCCESS ICON
+        ================================= */
+
+        .thankyou-icon{
+
+            width:90px;
+
+            height:90px;
+
+            margin:0 auto 25px;
+
+            border-radius:50%;
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            background:#fff4df;
+
+            border:1px solid #e8cfa7;
+
+            color:#8B0000;
+
+            font-size:45px;
+
+            box-shadow:
+                0 10px 30px rgba(139,0,0,.12);
+
+            animation:thankyouPulse 2s infinite;
+
+        }
+
+
+        @keyframes thankyouPulse{
+
+            0%{
+
+                box-shadow:
+                    0 0 0 0 rgba(139,0,0,.25);
+
+            }
+
+            70%{
+
+                box-shadow:
+                    0 0 0 18px rgba(139,0,0,0);
+
+            }
+
+            100%{
+
+                box-shadow:
+                    0 0 0 0 rgba(139,0,0,0);
+
+            }
+
+        }
+
+
+        /* =================================
+           HEADING
+        ================================= */
+
+        .thankyou-card h1{
+
+            margin:0 0 18px;
+
+            color:#222;
+
+            font-size:44px;
+
+            line-height:1.2;
+
+            font-weight:800;
+
+        }
+
+
+        .thankyou-card h1 span{
+
+            color:#8B0000;
+
+        }
+
+
+        /* =================================
+           MESSAGE
+        ================================= */
+
+        .thankyou-message{
+
+            max-width:660px;
+
+            margin:0 auto 30px;
+
+            color:#111;
+
+            font-size:18px;
+
+            line-height:1.8;
+
+        }
+
+
+        /* =================================
+           BUTTON WRAPPER
+        ================================= */
+
+        .thankyou-buttons{
+
+            display:flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:15px;
+
+            flex-wrap:wrap;
+
+            width:100%;
+
+            margin-top:5px;
+
+        }
+
+
+        /* =================================
+           COMMON BUTTON
+        ================================= */
+
+        .thankyou-buttons a{
+
+            display:inline-flex;
+
+            align-items:center;
+
+            justify-content:center;
+
+            gap:10px;
+
+            min-height:56px;
+
+            padding:16px 22px;
+
+            border-radius:50px;
+
+            text-decoration:none !important;
+
+            font-size:15px;
+
+            font-weight:700;
+
+            line-height:1.3;
+
+            white-space:nowrap;
+
+            transition:.35s;
+
+        }
+
+
+        /* =================================
+           WHATSAPP BUTTON
+        ================================= */
+
+        .thankyou-whatsapp{
+
+            background:#11a94a !important;
+
+            color:#fff !important;
+
+            box-shadow:
+                0 12px 25px rgba(17,169,74,.20);
+
+        }
+
+
+        .thankyou-whatsapp i{
+
+            font-size:19px;
+
+        }
+
+
+        .thankyou-whatsapp:hover{
+
+            color:#fff !important;
+
+            transform:translateY(-4px);
+
+            box-shadow:
+                0 18px 35px rgba(17,169,74,.30);
+
+        }
+
+
+        /* =================================
+           CALL BUTTON
+        ================================= */
+
+        .thankyou-call{
+
+            background:#8B0000 !important;
+
+            color:#fff !important;
+
+            box-shadow:
+                0 12px 25px rgba(139,0,0,.20);
+
+        }
+
+
+        .thankyou-call i{
+
+            font-size:18px;
+
+        }
+
+
+        .thankyou-call:hover{
+
+            color:#fff !important;
+
+            transform:translateY(-4px);
+
+            box-shadow:
+                0 18px 35px rgba(139,0,0,.30);
+
+        }
+
+
+        /* =================================
+           BACK TO HOME
+        ================================= */
+
+        .thankyou-home{
+
+            background:#fff !important;
+
+            color:#8B0000 !important;
+
+            border:1px solid #8B0000;
+
+        }
+
+
+        .thankyou-home i{
+
+            font-size:17px;
+
+        }
+
+
+        .thankyou-home:hover{
+
+            background:#8B0000 !important;
+
+            color:#fff !important;
+
+            transform:translateY(-4px);
+
+            box-shadow:
+                0 12px 25px rgba(139,0,0,.18);
+
+        }
+
+
+        /* =================================
+           TRUST LINE
+        ================================= */
+
+        .thankyou-trust{
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            flex-wrap:wrap;
+
+            gap:25px;
+
+            margin-top:35px;
+
+            padding-top:25px;
+
+            border-top:1px solid #eee;
+
+            color:#111;
+
+            font-size:15px;
+
+            font-weight:600;
+
+        }
+
+
+        .thankyou-trust span{
+
+            display:flex;
+
+            align-items:center;
+
+            gap:7px;
+
+        }
+
+
+        .thankyou-trust i{
+
+            color:#b8860b;
+
+            font-size:16px;
+
+        }
+
+
+        /* =================================
+           MOBILE
+        ================================= */
+
+        @media(max-width:576px){
+
+            .thankyou-section{
+
+                min-height:100vh;
+
+                padding:25px 15px;
+
+            }
+
+
+            .thankyou-card{
+
+                padding:40px 22px;
+
+                border-radius:22px;
+
+            }
+
+
+            .thankyou-icon{
+
+                width:75px;
+
+                height:75px;
+
+                margin-bottom:22px;
+
+                font-size:38px;
+
+            }
+
+
+            .thankyou-card h1{
+
+                font-size:34px;
+
+            }
+
+
+            .thankyou-message{
+
+                font-size:16px;
+
+                line-height:1.7;
+
+                margin-bottom:25px;
+
+            }
+
+
+            .thankyou-buttons{
+
+                flex-direction:column;
+
+                gap:12px;
+
+                width:100%;
+
+            }
+
+
+            .thankyou-buttons a{
+
+                width:100% !important;
+
+                min-height:53px;
+
+                padding:15px 18px;
+
+                white-space:normal;
+
+            }
+
+
+            .thankyou-trust{
+
+                flex-direction:column;
+
+                gap:14px;
+
+                align-items:center;
+
+                font-size:13px;
+
+            }
+
+        }
+
+
+        /* =================================
+           SMALL MOBILE
+        ================================= */
+
+        @media(max-width:380px){
+
+            .thankyou-card{
+
+                padding:35px 17px;
+
+            }
+
+
+            .thankyou-card h1{
+
+                font-size:30px;
+
+            }
+
+
+            .thankyou-message{
+
+                font-size:15px;
+
+            }
+
+
+            .thankyou-buttons a{
+
+                font-size:14px;
+
+            }
+
+        }
+
+    </style>
+      <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PBP6T986');</script>
+    <!-- End Google Tag Manager -->
+
+</head>
+
+
+<body>
+
+
+<section class="thankyou-section">
+
+
+    <div class="thankyou-card">
+
+
+        <!-- Success Icon -->
+
+        <div class="thankyou-icon">
+
+            <i class="bi bi-check-lg"></i>
+
+        </div>
+
+
+        <!-- Heading -->
+
+        <h1>
+
+            Thank <span>you!</span>
+
+        </h1>
+
+
+        <!-- Message -->
+
+        <p class="thankyou-message">
+
+            Pt. Dhiraj Baluni's team will call you within 24 hours.
+            Prefer to talk now?
+
+        </p>
+
+
+        <!-- CTA Buttons -->
+
+        <div class="thankyou-buttons">
+
+
+            <!-- WhatsApp -->
+
+            <a
+                href="https://wa.me/919868340066?text=Hello%20AstroVastuPooja,%20I%20just%20submitted%20a%20consultation%20request.%20I%20would%20prefer%20to%20talk%20now."
+
+                target="_blank"
+
+                rel="noopener"
+
+                class="thankyou-whatsapp">
+
+                <i class="bi bi-whatsapp"></i>
+
+                Chat on WhatsApp →
+
+            </a>
+
+
+            <!-- Call -->
+
+            <a
+                href="tel:+919868340066"
+
+                class="thankyou-call">
+
+                <i class="bi bi-telephone-fill"></i>
+
+                Call +91 98683 40066 →
+
+            </a>
+
+
+            <!-- Back To Home -->
+
+            <a
+                href="index.html"
+
+                class="thankyou-home">
+
+                <i class="bi bi-house-fill"></i>
+
+                Back to Home
+
+            </a>
+
+
+        </div>
+
+
+        <!-- Trust -->
+
+        <div class="thankyou-trust">
+
+
+            <span>
+
+                <i class="bi bi-people-fill"></i>
+
+                10,000+ Clients
+
+            </span>
+
+
+            <span>
+
+                <i class="bi bi-globe"></i>
+
+                100+ Countries
+
+            </span>
+
+
+            <span>
+
+                <i class="bi bi-shield-check"></i>
+
+                100% Confidential
+
+            </span>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+</body>
+
+</html>
