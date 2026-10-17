@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,9 +6,9 @@
     <link rel="icon" type="image/x-icon" href="/astrovastupooja/favicon.png">
     <title>Vastu Consultant in Delhi NCR | Home, Office & Plot Vastu</title>
     <meta name="description" content="Consult an experienced Vastu expert for home, office, factory and plot Vastu. Serving Delhi, Noida, Gurgaon, Ghaziabad and Greater Noida.">
-    <link href="/astrovastupooja/css/bootstrap.min.css" rel="stylesheet">  
+    <link href="/astrovastupooja/css/bootstrap.min.css?v=2.1" rel="stylesheet">  
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet"> 
-      <link href="/astrovastupooja/css/main.css" rel="stylesheet">  
+      <link href="/astrovastupooja/css/main.css?v=2.1" rel="stylesheet">  
       <!-- Google Tag Manager -->
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -2184,7 +2184,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-<script src="/astrovastupooja/js/script.js"></script>
+<script src="/astrovastupooja/js/script.js?v=2.1"></script>
 
 
 <!-- Google Tag Manager (noscript) -->
