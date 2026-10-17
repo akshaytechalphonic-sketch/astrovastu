@@ -60,6 +60,21 @@ class InquiryController extends Controller
 
     public function storeContact(Request $request)
     {
+        // Support both FullName/Phone and name/phone
+        if (!$request->has('FullName') && $request->has('name')) {
+            $request->merge(['FullName' => $request->input('name')]);
+        }
+        if (!$request->has('Phone') && $request->has('phone')) {
+            $request->merge(['Phone' => $request->input('phone')]);
+        }
+        if (!$request->has('Concern') && ($request->has('service') || $request->has('location'))) {
+            $concernText = 'Consultation for: ' . ($request->input('service') ?? 'General') . ' | Location: ' . ($request->input('location') ?? 'Not specified');
+            $request->merge(['Concern' => $concernText]);
+        }
+        if (!$request->has('Subject')) {
+            $request->merge(['Subject' => 'Vastu Consultation Request - Landing Page']);
+        }
+
         $validated = $request->validate([
             'FullName' => 'required|string|max:255',
             'Phone' => 'required|string|max:50',

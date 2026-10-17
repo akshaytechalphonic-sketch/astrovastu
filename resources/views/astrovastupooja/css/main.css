@@ -1,3 +1,4 @@
+html,
 body{
     overflow-x: hidden;
     max-width: 100%;
@@ -24,7 +25,7 @@ body{
 
     background:rgba(255,255,255,.92);
 
-    backdrop-filter:blur(12px);
+    backdrop-filter:blur(16px);
 
     box-shadow:0 5px 20px rgba(0,0,0,.06);
 
@@ -72,7 +73,7 @@ body{
 
     background:#c89b2c;
     color:#fff!important;
-    padding:12px 25px;
+    padding:16px 25px;
     border-radius:50px;
 
 }
@@ -191,7 +192,7 @@ body{
     text-align:center;
     background:#c89b2c;
     color:#fff!important;
-    padding:14px;
+    padding:16px;
     border-radius:50px;
     margin-top:20px;
 
@@ -229,305 +230,594 @@ display:none;
 
 
 
-.vastu-hero-section{
-    background:#fff6e1;
-    padding:40px 0;
-}
 
-.vastu-top-badge{
-    display:inline-block;
-    padding:10px 22px;
-    background:#f9efd8;
-    border-radius:50px;
-    font-size:16px;
-    font-weight:600;
-    color:#8b5e00;
-}
+/* ==========================================
+   VASTU HERO SECTION
+========================================== */
 
-.vastu-hero-title{
-    font-family:'Cormorant Garamond',serif;
-    font-size:32px;
-    font-weight:700;
-    color:#332313;
-    line-height:1.25;
-}
-
-.vastu-highlight{
-    color:#B57A00;
-    font-weight:700;
-}
-
-.vastu-highlight-text{
-    color:#D97706;
-    position:relative;
-    font-weight:700;
-}
-
-.vastu-highlight-text::after{
-    content:"";
-    position:absolute;
-    left:0;
-    bottom:4px;
-    width:100%;
-    height:10px;
-    background:#FDE68A;
-    z-index:-1;
-    border-radius:20px;
-}
-.vastu-hero-text{
-    font-size:18px;
-    color:#111;
-    margin-top:18px;
-    line-height:1.8;
-}
-
-.vastu-feature-box{
-    background:#fff;
-    border-radius:14px;
-    padding:16px;
-    display:flex;
-    align-items:center;
-    gap:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
-    height:100%;
-}
-
-.vastu-feature-box i{
-    width:48px;
-    height:48px;
-
-    color:#b57a00;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:20px;
-}
-
-.vastu-feature-box span{
-    font-size:16px;
-    font-weight:500;
-    color:#111;
-}
-.vastu-form-subtitle{
-    font-size:16px;
-    color:#111;
-    text-align:center;
-    line-height:1.6;
-    margin:2px 0 25px;
-}
-.vastu-btn-primary{
-    background:#b57a00;
-    color:#fff;
-    border-radius:50px;
-    padding:14px 28px;
-    font-weight:600;
-}
-
-.vastu-btn-primary:hover{
-    background:#966200;
-    color:#fff;
-}
-
-.vastu-btn-whatsapp{
-    background:#25D366;
-    color:#fff;
-    border-radius:50px;
-    padding:14px 28px;
-    font-weight:600;
-}
-
-.vastu-btn-whatsapp:hover{
-    color:#fff;
-}
-
-.vastu-call-box{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    font-weight:600;
-    font-size:18px;
-}
-
-.vastu-call-box i{
-    width:46px;
-    height:46px;
-    background:#f7edd8;
-    color:#b57a00;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.vastu-call-box a{
-    text-decoration:none;
-    color:#111;
-}
-
-.vastu-form-box{
-    background:#fff;
-    padding:35px;
-    border-radius:20px;
-    box-shadow:0 16px 45px rgba(0,0,0,.08);
-}
-
-.vastu-form-box h3{
-    font-size:26px;
-    text-align:center;
-    margin-bottom:10px;
-    font-family:'Cormorant Garamond',serif;
-    font-weight:700;
-}
-
-.vastu-form-box .form-control,
-.vastu-form-box .form-select{
-    height:54px;
-    border-radius:12px;
-    border:1px solid #ddd;
-}
-
-.vastu-form-box textarea.form-control{
-    height:auto;
-}
-
-@media(max-width:767px){
-
-.vastu-hero-section{
-    padding:30px 0;
-}
-
-.vastu-hero-title{
-    font-size:28px;
-}
-
-.vastu-feature-box{
-    padding:12px;
-}
-
-.vastu-feature-box span{
-    font-size:14px;
-}
-
-.vastu-call-box{
-    font-size:16px;
-}
-
-.vastu-form-box{
-    margin-top:20px;
-    padding:25px;
-}
-
-}
-
-
-.vastu-btn-primary,
-.vastu-btn-whatsapp{
+.vcn-hero {
     position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    padding: 55px 0;
+    background-color: #fcf7ee;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(252, 247, 238, 0.97) 0%,
+            rgba(252, 247, 238, 0.92) 37%,
+            rgba(252, 247, 238, 0.42) 66%,
+            rgba(252, 247, 238, 0.12) 100%
+        ),
+        url("../images/vastu-hero.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Left Content */
+
+.vcn-content {
+    max-width: 690px;
+    padding: 20px 15px 20px 0;
+}
+
+.vcn-title {
+    margin: 0;
+    color: #14263b;
+    font-size: clamp(42px, 4.5vw, 58px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -1.8px;
+}
+
+.vcn-title span {
+    display: block;
+    color: #a96d16;
+}
+
+.vcn-subtitle {
+    margin: 10px 0 20px;
+    color: #14263b;
+    font-size: clamp(25px, 2.8vw, 39px);
+    font-weight: 500;
+    line-height: 1.25;
+}
+
+.vcn-description {
+    max-width: 650px;
+    margin: 0 0 28px;
+    color: #253348;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.vcn-description strong {
+    color: #a96d16;
+    font-weight: 700;
+}
+
+/* ==========================================
+   CALL AND WHATSAPP BUTTONS
+========================================== */
+
+.vcn-hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
+.vcn-contact-btn {
+    position: relative;
+    isolation: isolate;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    min-height: 66px;
+    padding: 10px 17px 10px 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50px;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(66, 48, 19, 0.18);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+/* Golden Call Button */
+
+.vcn-call-btn {
+    background: linear-gradient(
+        110deg,
+        #d99a16,
+        #a85c00,
+        #d99a16
+    );
+    background-size: 200% 100%;
+    animation: vcn-gold-shimmer 4s ease-in-out infinite;
+}
+
+/* Green WhatsApp Button */
+
+.vcn-whatsapp-btn {
+    background: linear-gradient(
+        110deg,
+        #08a83e,
+        #00c85a,
+        #07983b
+    );
+    background-size: 200% 100%;
+    animation: vcn-green-shimmer 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+/* Circular Icon */
+
+.vcn-btn-icon {
+    position: relative;
+    z-index: 2;
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.6);
+    animation: vcn-icon-pulse 2s ease-out infinite;
+}
+
+.vcn-btn-icon i {
+    font-size: 21px;
+}
+
+.vcn-btn-text {
+    position: relative;
+    z-index: 2;
+    font-size: 17px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.vcn-btn-arrow {
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    font-size: 17px;
+    transition: transform 0.3s ease;
+}
+
+/* Inner Light Sweep */
+
+.vcn-contact-btn::before {
+    position: absolute;
+    z-index: 1;
+    top: -40%;
+    left: -70%;
+    width: 35%;
+    height: 180%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.42),
+        transparent
+    );
+    content: "";
+    transform: rotate(20deg);
+    animation: vcn-light-sweep 3.5s ease-in-out infinite;
+}
+
+.vcn-whatsapp-btn::before {
+    animation-delay: 1.4s;
+}
+
+.vcn-contact-btn:hover {
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(66, 48, 19, 0.25);
+}
+
+.vcn-contact-btn:hover .vcn-btn-arrow {
+    transform: translateX(5px);
+}
+
+/* Button Animations */
+
+@keyframes vcn-gold-shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes vcn-green-shimmer {
+    0%, 100% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes vcn-icon-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.55);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes vcn-light-sweep {
+    0%, 15% {
+        left: -70%;
+    }
+
+    55%, 100% {
+        left: 140%;
+    }
+}
+
+/* ==========================================
+   CONSULTATION FORM
+========================================== */
+
+.vcn-form-card {
+    padding: 30px 26px;
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.97);
+    box-shadow: 0 18px 45px rgba(44, 35, 22, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+.vcn-form-card h2 {
+    margin: 0 0 10px;
+    color: #14263b;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.vcn-form-description {
+    margin: 0 0 23px;
+    color: #111;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* Input Fields */
+
+.vcn-form-group {
+    margin-bottom: 16px;
+}
+
+.vcn-input-wrap,
+.vcn-select-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.vcn-input-icon {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    border-right: 1px solid #f0e3d1;
+    border-radius: 10px 0 0 10px;
+    background: #fff7e9;
+    color: #a95d12;
+    pointer-events: none;
+}
+
+.vcn-input-icon i {
+    font-size: 18px;
+}
+
+.vcn-input-wrap input,
+.vcn-select-wrap select {
+    width: 100%;
+    height: 51px;
+    padding: 10px 16px 10px 60px;
+    border: 1px solid #eadfce;
+    border-radius: 10px;
+    outline: none;
+    background: #fff;
+    color: #253348;
+    font-family: inherit;
+    font-size: 16px;
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.vcn-input-wrap input::placeholder {
+    color: #777e88;
+}
+
+.vcn-select-wrap select {
+    padding-right: 38px;
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.vcn-select-arrow {
+    position: absolute;
+    right: 16px;
+    color: #505b69;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.vcn-input-wrap input:focus,
+.vcn-select-wrap select:focus {
+    border-color: #b7802b;
+    box-shadow: 0 0 0 3px rgba(183, 128, 43, 0.12);
+}
+
+/* Form Submit */
+
+.vcn-submit-btn {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    width: 100%;
+    min-height: 53px;
+    margin-top: 5px;
+    padding: 16px 16px;
     overflow: hidden;
     border: none;
-    border-radius: 50px;
-    padding: 14px 30px;
-    font-size: 18px;
-    font-weight: 600;
-    transition: all .35s ease;
-    animation: heroFloat 3s ease-in-out infinite;
+    border-radius: 16px;
+    background: linear-gradient(
+        110deg,
+        #a80c00,
+        #c05a00,
+        #d38a00
+    );
+    background-size: 200% 100%;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    animation: vcn-submit-shimmer 4s ease-in-out infinite;
 }
 
-/* Gold Button */
-.vastu-btn-primary{
-    background: linear-gradient(135deg,#C89211,#A56A00);
-    color:#fff;
-    box-shadow:0 12px 30px rgba(201,146,17,.35);
+.vcn-submit-btn::before {
+    position: absolute;
+    z-index: -1;
+    top: -50%;
+    left: -60%;
+    width: 30%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.25);
+    content: "";
+    transform: rotate(20deg);
+    animation: vcn-light-sweep 4s ease-in-out infinite;
 }
 
-/* WhatsApp Button */
-.vastu-btn-whatsapp{
-    background:linear-gradient(135deg,#25D366,#18B857);
-    color:#fff;
-    box-shadow:0 12px 30px rgba(37,211,102,.35);
+.vcn-submit-btn i {
+    font-size: 17px;
 }
 
-/* Hover */
-.vastu-btn-primary:hover,
-.vastu-btn-whatsapp:hover{
-    transform:translateY(-6px) scale(1.03);
-    color:#fff;
-}
-
-/* Click */
-.vastu-btn-primary:active,
-.vastu-btn-whatsapp:active{
-    transform:scale(.97);
-}
-
-/* Shine Effect */
-.vastu-btn-primary::before,
-.vastu-btn-whatsapp::before{
-    content:"";
-    position:absolute;
-    top:0;
-    left:-120%;
-    width:60%;
-    height:100%;
-    background:rgba(255,255,255,.35);
-    transform:skewX(-25deg);
-    animation:shine 3.5s linear infinite;
-}
-
-/* Floating Animation */
-@keyframes heroFloat{
-
-    0%,100%{
-        transform:translateY(0);
+@keyframes vcn-submit-shimmer {
+    0%, 100% {
+        background-position: 0% 50%;
     }
 
-    50%{
-        transform:translateY(-5px);
+    50% {
+        background-position: 100% 50%;
     }
-
 }
 
-/* Shine Animation */
-@keyframes shine{
+/* Hidden Honeypot */
 
-    0%{
-        left:-120%;
-    }
-
-    100%{
-        left:160%;
-    }
-
+.vcn-honeypot {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
-/* WhatsApp Icon Animation */
-.vastu-btn-whatsapp i{
-    animation:whatsappPulse 1.6s infinite;
-}
+/* ==========================================
+   RESPONSIVE DESIGN
+========================================== */
 
-@keyframes whatsappPulse{
+@media (max-width: 1199px) {
 
-    0%,100%{
-        transform:scale(1);
+    .vcn-title {
+        font-size: 52px;
     }
 
-    50%{
-        transform:scale(1.18);
+    .vcn-subtitle {
+        font-size: 31px;
+    }
+
+    .vcn-description {
+        font-size: 15px;
+    }
+
+    .vcn-contact-btn {
+        gap: 9px;
+        padding-right: 16px;
+    }
+
+    .vcn-btn-text {
+        font-size: 16px;
+    }
+
+    .vcn-form-card {
+        padding: 25px 19px;
     }
 
 }
 
-/* Mobile */
-@media(max-width:767px){
+@media (max-width: 991px) {
 
-.vastu-btn-primary,
-.vastu-btn-whatsapp{
-    width:100%;
-    justify-content:center;
+    .vcn-hero {
+        padding: 40px 0;
+        background-image:
+            linear-gradient(
+                rgba(252, 247, 238, 0.93),
+                rgba(252, 247, 238, 0.97)
+            ),
+            url("../images/vastu-hero.webp");
+        background-position: center;
+    }
+
+    .vcn-content {
+        max-width: 100%;
+        padding: 0 0 15px;
+    }
+
+    .vcn-title {
+        font-size: clamp(42px, 7vw, 58px);
+    }
+
+    .vcn-subtitle {
+        font-size: 30px;
+    }
+
+    .vcn-description {
+        font-size: 16px;
+    }
+
+    .vcn-form-card {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 28px;
+    }
+
+    .vcn-contact-btn {
+        min-width: 245px;
+    }
+
+    .vcn-btn-text {
+        font-size: 16px;
+    }
+
 }
 
+@media (max-width: 575px) {
+
+    .vcn-hero {
+        padding: 30px 0;
+    }
+
+    .vcn-title {
+        font-size: 39px;
+        letter-spacing: -1px;
+        line-height: 1.1;
+    }
+
+    .vcn-subtitle {
+        margin: 10px 0 16px;
+        font-size: 25px;
+        line-height: 1.3;
+    }
+
+    .vcn-description {
+        margin-bottom: 23px;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .vcn-hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .vcn-contact-btn {
+        width: 100%;
+        min-width: 0;
+        min-height: 62px;
+        justify-content: flex-start;
+        padding: 9px 15px;
+    }
+
+    .vcn-btn-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .vcn-btn-text {
+        font-size: 16px;
+    }
+
+    .vcn-form-card {
+        padding: 23px 17px;
+        border-radius: 17px;
+    }
+
+    .vcn-form-card h2 {
+        font-size: 23px;
+    }
+
+    .vcn-form-description {
+        font-size: 16px;
+    }
+
+    .vcn-input-wrap input,
+    .vcn-select-wrap select {
+        height: 49px;
+        font-size: 16px;
+    }
+
 }
+
+/* Accessibility: Respect Reduced Motion */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .vcn-contact-btn,
+    .vcn-contact-btn::before,
+    .vcn-btn-icon,
+    .vcn-submit-btn,
+    .vcn-submit-btn::before {
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .hero-slider{
@@ -582,8 +872,8 @@ display:none;
 
 .hero-slider .carousel-indicators button{
 
-    width:12px;
-    height:12px;
+    width:16px;
+    height:16px;
 
     border-radius:50%;
 
@@ -627,7 +917,7 @@ display:none;
     color:#A56A00;
     padding:8px 18px;
     border-radius:50px;
-    font-size:14px;
+    font-size:16px;
     font-weight:600;
 }
 
@@ -700,7 +990,7 @@ display:none;
 }
 
 .vastu-consult-card{
-    padding:20px 12px;
+    padding:20px 16px;
 }
 
 .vastu-consult-card i{
@@ -796,7 +1086,7 @@ display:none;
 
     align-items:center;
 
-    gap:12px;
+    gap:16px;
 
     margin-bottom:25px;
 
@@ -975,11 +1265,11 @@ display:none;
 
     color:#A56A00;
 
-    padding:6px 14px;
+    padding:6px 16px;
 
     border-radius:30px;
 
-    font-size:14px;
+    font-size:16px;
 
     font-weight:600;
 
@@ -1079,7 +1369,7 @@ display:none;
 
     width:100%;
 
-    height:12px;
+    height:16px;
 
     background:#FFE28A;
 
@@ -1304,7 +1594,7 @@ display:none;
 
     align-items:center;
 
-    gap:12px;
+    gap:16px;
 
     padding:10px 42px;
 
@@ -1496,7 +1786,7 @@ height:180px;
 
 .vastu-note{
 
-padding:30px 12px;
+padding:30px 16px;
 
 }
 
@@ -1562,7 +1852,7 @@ font-size:20px;
     border:1px solid rgba(212,175,55,.4);
     color:#B8860B;
     border-radius:50px;
-    font-size:14px;
+    font-size:16px;
     font-weight:600;
     letter-spacing:.5px;
     margin-bottom:18px;
@@ -1632,7 +1922,7 @@ font-size:20px;
     color:#fff;
     padding:8px 16px;
     border-radius:40px;
-    font-size:13px;
+    font-size:16px;
     font-weight:600;
     z-index:2;
     box-shadow:0 8px 20px rgba(212,175,55,.35);
@@ -1664,7 +1954,7 @@ font-size:20px;
     display:inline-flex;
     align-items:center;
     gap:10px;
-    padding:14px 20px;
+    padding:16px 20px;
     border-radius:50px;
     background:linear-gradient(135deg,#d4af37,#b8860b);
     color:#fff;
@@ -1673,7 +1963,7 @@ font-size:20px;
     overflow:hidden;
     position:relative;
     transition:.35s;
-    box-shadow:0 12px 25px rgba(212,175,55,.35);
+    box-shadow:0 16px 25px rgba(212,175,55,.35);
 }
 
 
@@ -1725,7 +2015,7 @@ left:140%;
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 14px 10px;
+    padding: 16px 5px;
     border-radius: 50px;
     background: linear-gradient(135deg, #d4af37, #b8860b);
     color: #fff;
@@ -1734,8 +2024,9 @@ left:140%;
     overflow: hidden;
     position: relative;
     transition: .35s;
-    box-shadow: 0 12px 25px rgba(212, 175, 55, .35);
+    box-shadow: 0 16px 25px rgba(212, 175, 55, .35);
 }
+.vastu-service-btn i{display: none;}
 .vastu-services-section{
     padding:40px 0;
 }
@@ -1822,7 +2113,7 @@ left:140%;
     display:inline-flex;
     align-items:center;
     gap:10px;
-    padding:12px 20px;
+    padding:16px 20px;
     border-radius:50px;
     font-weight:700;
     margin-bottom:10px;
@@ -1840,7 +2131,7 @@ left:140%;
 
 .analysis-item{
     background:#fff;
-    padding:12px 22px;
+    padding:16px 22px;
     border-radius:18px;
     box-shadow:0 16px 35px rgba(0,0,0,.08);
     display:flex;
@@ -2067,13 +2358,7 @@ font-size:22px;
 
 }
 
-.compass-circle{
 
-width:200px;
-height:200px;
-margin:40px auto;
-
-}
 
 .compass-circle img {
     width: 100%;
@@ -2157,7 +2442,7 @@ margin-top:30px;
 
     background:#fff;
 
-    padding:14px 24px;
+    padding:16px 24px;
 
     border-radius:50px;
 
@@ -2259,7 +2544,7 @@ margin-top:30px;
 
     transition:.35s;
 
-    box-shadow:0 12px 30px rgba(0,0,0,.05);
+    box-shadow:0 16px 30px rgba(0,0,0,.05);
 }
 
 .authority-item:hover{
@@ -2487,7 +2772,7 @@ margin-top:30px;
 
     font-size:24px;
 
-    margin-bottom:12px;
+    margin-bottom:16px;
 
     font-weight:700;
 
@@ -2548,7 +2833,7 @@ margin-top:30px;
 
     display:inline-flex;
     align-items:center;
-    gap:12px;
+    gap:16px;
 
     padding:18px 40px;
 
@@ -3227,7 +3512,7 @@ padding:18px;
 .vfc-form-box .form-select{
 
     height:55px;
-    border-radius:12px;
+    border-radius:16px;
     border:1px solid #e3e3e3;
     box-shadow:none;
 
@@ -3398,7 +3683,7 @@ margin-top:20px;
 
     border-radius:30px;
 
-    font-size:14px;
+    font-size:16px;
 
     font-weight:600;
 
@@ -3502,7 +3787,7 @@ margin-top:20px;
 
     padding:10px 5px;
 
-    font-size:13px;
+    font-size:16px;
     font-weight:600;
 
     transition:.3s;
@@ -3641,7 +3926,7 @@ margin-top:20px;
 .enquiry-modal .form-select{
 
     height:52px;
-    border-radius:12px;
+    border-radius:16px;
     box-shadow:none;
 
 }
@@ -3701,7 +3986,7 @@ margin-top:20px;
     align-items:center;
     justify-content:center;
 
-    box-shadow:0 12px 30px rgba(212,175,55,.35);
+    box-shadow:0 16px 30px rgba(212,175,55,.35);
 
     opacity:0;
     visibility:hidden;
@@ -3827,7 +4112,7 @@ margin-top:20px;
     color:#fff;
     padding:8px 18px;
     border-radius:30px;
-    font-size:14px;
+    font-size:16px;
     margin-bottom:16px;
 
 }
@@ -3869,5 +4154,634 @@ bottom:20px;
 font-size:26px;
 
 }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.hero-form{
+
+    background:#fff;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 60px rgba(0,0,0,.15);
+
+    border:1px solid #f0dfc0;
+
+}
+
+.hero-form-header{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.hero-form-header span{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#8B0000;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+    margin-bottom:8px;
+
+}
+
+.hero-form-header h3{
+
+    margin:0;
+
+    color:#222;
+
+    font-size:28px;
+
+    font-weight:800;
+
+}
+
+.hero-form label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:#333;
+
+}
+
+.hero-form .input-group-text{
+
+    background:#fff8ed;
+
+    border-color:#e5d5bd;
+
+    color:#8B0000;
+
+}
+
+.hero-form .form-control,
+.hero-form .form-select{
+
+    min-height:48px;
+
+    border-color:#e5d5bd;
+
+    box-shadow:none;
+
+}
+
+.hero-form textarea.form-control{
+
+    min-height:auto;
+
+}
+
+.hero-form .form-control:focus,
+.hero-form .form-select:focus{
+
+    border-color:#8B0000;
+
+    box-shadow:0 0 0 3px rgba(139,0,0,.08);
+
+}
+
+.hero-form-btn{
+
+    width:100%;
+
+    border:0;
+
+    padding:15px 20px;
+
+    border-radius:50px;
+
+    background:linear-gradient(90deg,#8B0000,#b8860b);
+
+    color:#fff;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.hero-form-btn i{
+
+    margin-right:8px;
+
+}
+
+.hero-form-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 16px 25px rgba(139,0,0,.25);
+
+}
+
+@media(max-width:576px){
+
+    .hero-form{
+
+        padding:22px 18px;
+
+        border-radius:16px;
+
+    }
+
+    .hero-form-header h3{
+
+        font-size:24px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+/* ==========================================
+   VASTU EDITORIAL SECTION
+========================================== */
+
+.vastu-editorial-section {
+    padding: 45px 0;
+    background: #fff;
+    color: #17283b;
+}
+
+/* INTRO */
+
+.ve-intro {
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 40px;
+}
+
+.ve-eyebrow,
+.ve-small-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #a7752a;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.8px;
+}
+
+.ve-intro-left h2 {
+    max-width: 620px;
+    margin: 0;
+    color: #17283b;
+    font-size: clamp(34px, 3.7vw, 42px);
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -1.2px;
+}
+
+.ve-intro-left h2 span {
+    display: block;
+    color: #ae7a2b;
+}
+
+.ve-intro-right {
+    padding-left: 25px;
+    border-left: 3px solid #d4b47b;
+}
+
+.ve-intro-right p {
+    margin: 0;
+    color: #111;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+.ve-divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 45px;
+    background: #e6ddcf;
+}
+
+/* SECTION HEADING */
+
+.ve-section-heading {
+    margin-bottom: 25px;
+}
+
+.ve-section-heading .ve-small-label {
+    margin-bottom: 10px;
+}
+
+.ve-section-heading h3 {
+    max-width: 600px;
+    margin: 0;
+    color: #17283b;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.4;
+}
+
+/* NUMBERED CHECK LIST */
+
+.ve-check-list {
+    border-top: 1px solid #e5dac9;
+}
+
+.ve-check-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 42px 1fr 46px;
+    align-items: center;
+    gap: 17px;
+    padding: 23px 16px;
+    border-bottom: 1px solid #e5dac9;
+    transition: background 0.3s ease,
+                padding 0.3s ease;
+}
+
+.ve-check-item:hover {
+    padding-right: 18px;
+    padding-left: 18px;
+    background: #fffdf8;
+}
+
+.ve-check-number {
+    align-self: start;
+    padding-top: 2px;
+    color: #b3833b;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.ve-check-content h4 {
+    margin: 0 0 7px;
+    color: #17283b;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.ve-check-content p {
+    margin: 0;
+    color: #111;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.ve-check-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border: 1px solid #ead9b9;
+    border-radius: 50%;
+    background: #fff9ed;
+    color: #a7752a;
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.ve-check-icon i {
+    font-size: 20px;
+}
+
+.ve-check-item:hover .ve-check-icon {
+    background: #a7752a;
+    color: #fff;
+}
+
+/* RIGHT TIMELINE PANEL */
+
+.ve-timeline-panel {
+    height: 100%;
+    padding: 32px 27px;
+    border-radius: 5px 20px 20px 20px;
+    background: #17283b;
+    color: #fff;
+    box-shadow: 0 15px 40px rgba(23, 40, 59, 0.12);
+}
+
+.ve-panel-heading {
+    margin-bottom: 30px;
+}
+
+.ve-panel-heading .ve-small-label {
+    color: #dfbc7b;
+    line-height: 1.7;
+}
+
+.ve-panel-heading h3 {
+    margin: 0;
+    color: #fff;
+    font-size: 27px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+/* TIMELINE */
+
+.ve-timeline {
+    position: relative;
+    padding-left: 2px;
+}
+
+.ve-timeline::before {
+    position: absolute;
+    top: 22px;
+    bottom: 24px;
+    left: 20px;
+    width: 1px;
+    background: rgba(226, 193, 133, 0.4);
+    content: "";
+}
+
+.ve-timeline-item {
+    position: relative;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 15px;
+    padding-bottom: 28px;
+}
+
+.ve-timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.ve-timeline-icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #82683f;
+    border-radius: 50%;
+    background: #22364b;
+    color: #e7c486;
+}
+
+.ve-timeline-icon i {
+    font-size: 18px;
+}
+
+.ve-timeline-content {
+    padding-top: 2px;
+}
+
+.ve-timeline-content h4 {
+    margin: 0 0 8px;
+    color: #f1d49c;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.ve-timeline-content p {
+    margin: 0;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* BOTTOM CTA */
+
+.ve-bottom-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 45px;
+    padding: 27px 30px;
+    border: 1px solid #e8dcc6;
+    border-radius: 15px;
+    background: #fffdf8;
+}
+
+.ve-bottom-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex: 1;
+}
+
+.ve-bottom-icon {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 51px;
+    height: 51px;
+    border-radius: 50%;
+    background: #f4e6cc;
+    color: #9d6c22;
+}
+
+.ve-bottom-icon i {
+    font-size: 24px;
+}
+
+.ve-bottom-content p {
+    margin: 0;
+    color: #111;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.ve-cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+    min-height: 51px;
+    padding: 16px 21px;
+    border-radius: 8px;
+    background: #a87320;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease,
+                transform 0.3s ease;
+}
+
+.ve-cta-button:hover {
+    transform: translateY(-3px);
+    background: #875719;
+    color: #fff;
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+    .vastu-editorial-section {
+        padding: 60px 0;
+    }
+
+    .ve-intro {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .ve-intro-right {
+        padding-left: 18px;
+    }
+
+    .ve-section-heading h3 {
+        font-size: 26px;
+    }
+
+    .ve-timeline-panel {
+        padding: 28px 23px;
+    }
+
+    .ve-bottom-cta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .ve-cta-button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    .vastu-editorial-section {
+        padding: 45px 0;
+    }
+
+    .ve-intro {
+        gap: 18px;
+        margin-bottom: 28px;
+    }
+
+    .ve-intro-left h2 {
+        font-size: 34px;
+        letter-spacing: -0.8px;
+    }
+
+    .ve-intro-right p {
+        font-size: 16px;
+    }
+
+    .ve-divider {
+        margin-bottom: 30px;
+    }
+
+    .ve-section-heading h3 {
+        font-size: 24px;
+    }
+
+    .ve-check-item {
+        grid-template-columns: 31px 1fr 36px;
+        gap: 10px;
+        padding: 20px 4px;
+    }
+
+    .ve-check-item:hover {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .ve-check-number {
+        font-size: 16px;
+    }
+
+    .ve-check-content h4 {
+        font-size: 15px;
+    }
+
+    .ve-check-content p {
+        font-size: 16px;
+        line-height: 1.75;
+    }
+
+    .ve-check-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .ve-check-icon i {
+        font-size: 17px;
+    }
+
+    .ve-timeline-panel {
+        padding: 25px 19px;
+        border-radius: 5px 16px 16px 16px;
+    }
+
+    .ve-panel-heading h3 {
+        font-size: 25px;
+    }
+
+    .ve-bottom-cta {
+        gap: 20px;
+        margin-top: 30px;
+        padding: 22px 17px;
+    }
+
+    .ve-bottom-content {
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .ve-bottom-icon {
+        width: 42px;
+        height: 42px;
+    }
+
+    .ve-bottom-content p {
+        font-size: 16px;
+    }
+
+    .ve-cta-button {
+        padding: 16px 10px;
+        font-size: 16px;
+    }
 
 }
